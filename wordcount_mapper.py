@@ -3,7 +3,8 @@
 
 # ---------------------------------------------------------------
 #This mapper code will input a line of text and output <word, 1>
-# 
+# python3 wordcount_mapper.py "line" or
+# echo "line" | python3 wordcount_mapper.py
 # ---------------------------------------------------------------
 
 import sys             #a python module with system functions for this OS
