@@ -2,6 +2,7 @@
 Big Data (Hadoop and Spark) Training by University of California San Diego on Coursera platform
 
 to test py files:
+ 
  python3 wordcount_mapper.py "line" or
  echo "line" | python3 wordcount_mapper.py
 
