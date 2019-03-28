@@ -30,6 +30,7 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 hdfs dfs -ls /user/cloudera/output_new
 hdfs dfs -cat /user/cloudera/output_new/part-00000
 
+#onlu mapper results will be delivered
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
    -input /user/cloudera/input \
    -output /user/cloudera/output_new_1 \
@@ -37,5 +38,5 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
    -reducer /wordcount_reducer.py \
    -numReduceTasks 0
 
-#merge files
+#merge files for uploading
 hdfs dfs -getmerge /user/cloudera/output_new_0/* wordcount_num0_output.txt  
