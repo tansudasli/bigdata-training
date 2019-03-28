@@ -12,6 +12,9 @@ import sys             #a python module with system functions for this OS
 # ------------------------------------------------------------
 #  this 'for loop' will set 'line' to an input line from system 
 #    standard input file
+#
+# python3 wordcount_mapper.py "line" or 
+# echo "line" | python3 wordcount_mapper.py
 # ------------------------------------------------------------
 for line in sys.stdin:  
 
@@ -30,3 +33,5 @@ for line in sys.stdin:
         print('{0}\t{1}'.format(key, value) ) 
             #the {} is replaced by 0th,1st items in format list
             #also, note that the Hadoop default is 'tab' separates key from the value
+            #w1    1
+            #w2    2
