@@ -48,16 +48,15 @@ for line in sys.stdin:
     if curr_word != prev_word:
 
         # -----------------------     
-	#now write out the join result, but not for the first line input
+	    #now write out the join result, but not for the first line input
         # -----------------------
         if line_cnt>1:
-	    for i in range(len(dates_to_output)):  #loop thru dates, indexes start at 0
-	         print('{0} {1} {2} {3}'.format(dates_to_output[i],prev_word,day_cnts_to_output[i],curr_word_total_cnt))
-            #now reset lists
-	    dates_to_output   =[]
+            for i in range(len(dates_to_output)):  #loop thru dates, indexes start at 0
+                print('{0} {1} {2} {3}'.format(dates_to_output[i],prev_word,day_cnts_to_output[i],curr_word_total_cnt))
+                #now reset lists
+            dates_to_output   =[]
             day_cnts_to_output=[]
-        prev_word         =curr_word  #set up previous word for the next set of input lines
-
+        prev_word = curr_word  #set up previous word for the next set of input lines
 	
     # ---------------------------------------------------------------
     #whether or not the join result was written out, 
