@@ -17,6 +17,7 @@ import sys
 
 # the aim is format input files into tabbed format , which is must fot hadoop!
 # after <cat join1_File*.txt> , below lines combined into 1 
+#        cat ./input/jo* | ./join1_mapper.py
 #          able,991     ->A
 #   Jan-01 able,5       ->B
 

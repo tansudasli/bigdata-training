@@ -14,20 +14,13 @@ import sys
 # At the end it will perform the last join
 #
 #
-#  Note, there is NO error checking of the input, it is assumed to be correct, meaning
-#   it has word with correct and matching entries, no extra spaces, etc.
-#
-#  see https://docs.python.org/2/tutorial/index.html for python tutorials
-#
-#  San Diego Supercomputer Center copyright
 # --------------------------------------------------------------------------
 
-prev_word          = "  "                #initialize previous word  to blank string
+prev_word          = "  "
 months             = ['Jan','Feb','Mar','Apr','Jun','Jul','Aug','Sep','Nov','Dec']
 
 dates_to_output    = [] #an empty list to hold dates for a given word
 day_cnts_to_output = [] #an empty list of day counts for a given word
-# see https://docs.python.org/2/tutorial/datastructures.html for list details
 
 line_cnt           = 0  #count input lines
 
