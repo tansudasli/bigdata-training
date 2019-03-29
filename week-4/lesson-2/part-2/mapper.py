@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 import sys
 
-
 # the aim is format input files into tabbed format , which is must for hadoop!
-# after <cat join1_File*.txt> , below lines combined into 1 
+# after <cat join1_File*.txt | ./mapper.py> , below lines combined into 1 
 #          tv-show,counter     
 #          tv-show,channel     
 # we need to format them as tabbed format for hadoop
