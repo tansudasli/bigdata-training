@@ -9,7 +9,7 @@
 # ---------------------------------------------------------------
 import sys
 
-last_key      = None              #initialize these variables
+last_key      = None #initialize these variables
 running_total = 0
 
 # -----------------------------------
@@ -32,19 +32,17 @@ for input_line in sys.stdin:
     #          as the last one Consolidate
     #    otherwise  Emit
     # ---------------------------------
-    if last_key == this_key:     #check if key has changed ('==' is                                   #      logical equalilty check
+    if last_key == this_key:     #check if key has changed ('==' is # logical equalilty check
         running_total += value   # add value to running total
 
     else:
-        if last_key:             #if this key that was just read in
+        if last_key:             # if this key that was just read in
                                  #   is different, and the previous 
                                  #   (ie last) key is not empy,
-                                 #   then output 
-                                 #   the previous <key running-count>
+                                 #   then output the previous <key running-count>
             print( "{0}\t{1}".format(last_key, running_total) )
-                                 # hadoop expects tab(ie '\t') 
-                                 #    separation
-        running_total = value    #reset values
+                                 # hadoop expects tab(ie '\t') separation
+        running_total = value    # reset values
         last_key = this_key
 
 if last_key == this_key:
