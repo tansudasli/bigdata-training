@@ -15,7 +15,8 @@ import sys
 #
 # --------------------------------------------------------------------------
 
-
+#          able,991     ->A
+#   Jan-01 able,5       ->B
 
 for line in sys.stdin:
     line       = line.strip()   #strip out carriage return
