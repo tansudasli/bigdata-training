@@ -33,7 +33,7 @@ hdfs dfs -cat /user/cloudera/output_new/part-00000
 #onlu mapper results will be delivered
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
    -input /user/cloudera/input \
-   -output /user/cloudera/output_new_1 \
+   -output /user/cloudera/output \
    -mapper /wordcount_mapper.py \
    -reducer /wordcount_reducer.py \
    -numReduceTasks 0

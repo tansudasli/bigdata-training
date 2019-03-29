@@ -15,6 +15,8 @@ import sys
 #
 # --------------------------------------------------------------------------
 
+# the aim is format input files into tabbed format , which is must fot hadoop!
+# after <cat join1_File*.txt> , below lines combined into 1 
 #          able,991     ->A
 #   Jan-01 able,5       ->B
 
@@ -24,13 +26,13 @@ for line in sys.stdin:
     key_in     = key_value[0].split(" ")   #key is first item in list
     value_in   = key_value[1]   #value is 2nd item 
 
-    #print key_in
-    if len(key_in)>=2:           #if this entry has <date word> in key
+    
+    if len(key_in)>=2:        #if this entry has <date word> in key / File B
         date = key_in[0]      #now get date from key field
         word = key_in[1]
-        value_out = date+" "+value_in     #concatenate date, blank, and value_in
+        value_out = date + " " +value_in     #concatenate date, blank, and value_in
         print( '%s\t%s' % (word, value_out) )  #print a string, tab, and string
-    else:   #key is only <word> so just pass it through
+    else:   #key is only <word> so just pass it through \ File A
         print( '%s\t%s' % (key_in[0], value_in) )  #print a string tab and string
 
 #Note that Hadoop expects a tab to separate key value
