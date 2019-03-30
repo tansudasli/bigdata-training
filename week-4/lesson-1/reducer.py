@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
+import sys
+
 # ---------------------------------------------------------------
-#This reducer code will input a line of text and 
+# This reducer code will input a line of text and 
 #    output <word, total-count>
 # cat ./input/test* | ./wordcount_mapper.py | sort | ./wordcount_reducer.py
 # ---------------------------------------------------------------
-import sys
 
 last_key = None 
 running_total = 0
@@ -30,5 +31,6 @@ for input_line in sys.stdin:
         running_total = value  
         last_key = this_key
 
+#print last line
 if last_key == this_key:
     print( "{0}\t{1}".format(last_key, running_total)) 

@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 #This mapper code will input a line of text and output <word, 1>
 # python3 wordcount_mapper.py "line" or
-# cat ./input/test* | ./wordcount_mapper.py
+# cat ./input/test* | ./mapper.py
 # a     1
 # a     1
 # far   1
@@ -22,4 +22,4 @@ for line in sys.stdin:
         value = 1        
         print('{0}\t{1}'.format(key, value) ) 
 
-
+#hadoop wait tabbed data
