@@ -1,6 +1,9 @@
 # california-bigdata-training
 Big Data (Hadoop and Spark) Training by University of California San Diego on Coursera platform
 
+#some notes
+use uploadToClouderaStackonGCP files for detailed commands.
+
 #some hadoop commands 
 > hdfs dfs -put localFile /user/cloudera     {put a local file into hdfs file system}
 > pig -x mapreduce          {pig CLI}
