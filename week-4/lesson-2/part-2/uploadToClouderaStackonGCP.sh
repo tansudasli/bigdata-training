@@ -24,8 +24,13 @@ cat input/*.txt | ./mapper.py | sort
 cat input/*.txt | ./mapper.py | sort | ./reducer.py
 
 #run it on hadoop
-hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar 
--input /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/input  
--output /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/output 
--mapper /california-bigdata-training/week-4/lesson-2/part-2/mapper.py 
--reducer /california-bigdata-training/week-4/lesson-2/part-2/reducer.py
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/input  -output /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/output -mapper /california-bigdata-training/week-4/lesson-2/part-2/mapper.py -reducer /california-bigdata-training/week-4/lesson-2/part-2/reducer.py -numReduceTasks=1
+
+#to see results
+hdfs dfs -cat /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/output/*
+
+
+hdfs dfs -getmerge /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/output/* total_viewer_counts.txt 
+
+#copy docker to GCP Instance
+docker cp e75:/total_viewer_counts.txt .
