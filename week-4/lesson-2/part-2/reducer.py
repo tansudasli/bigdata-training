@@ -2,20 +2,40 @@
 import sys
 
 # the aim is format input files into tabbed format , which is must for hadoop!
-# after <cat join1_File*.txt | ./mapper.py> , below lines combined into 1 
+#  cat ./input/join2* | ./mapper.py | sort | ./reducer.py 
 #          tv-show,counter     
 #          tv-show,channel     
 # we need to format them as tabbed format for hadoop
+#          channel[], tv-show[] counter
+#          channel[], counter
 
-line_cnt           = 0  #count input lines
+previousTvShow = " "
+lineCount = 0 
+
+total = 0
+isABC = False
 
 for line in sys.stdin:
-    line       = line.strip()       #strip out carriage return
-    key_value  = line.split('\t')   #split line, into key and value, returns a list
-    line_cnt   = line_cnt+1     
+    line = line.strip()      
+    k,v  = line.split('\t')  
 
-    #note: for simple debugging use print statements, ie:  
-    curr_word  = key_value[0]         #key is first item in list, indexed by 0
-    value_in   = key_value[1]         #value is 2nd item
+    lineCount += 1  
+
+    if k != previousTvShow:
+        if lineCount > 1:
+            if isABC:
+                print('{0} {1}'.format(previousTvShow, total))
+
+        isABC = False
+        total = 0
+        previousTvShow = k  
+
+    if v == "ABC":
+        isABC = True
+    else:
+        total += int(v)
+
+#print last line
+print('{0} {1}'.format(k,total)) 
 
  
