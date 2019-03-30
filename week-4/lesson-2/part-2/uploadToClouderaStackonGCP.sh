@@ -4,7 +4,7 @@
 git clone https://github.com/tansudasli/california-bigdata-training.git
 
 #transfer codes from GCP instance to cloudera-stack-docker
-#start docker
+#start docker. copy to docker. give execution permission
 docker cp california-bigdata-training/ ee75aeac85461:/
 chmod +x mapper.py
 chmod +x reducer.py
@@ -24,4 +24,8 @@ cat input/*.txt | ./mapper.py | sort
 cat input/*.txt | ./mapper.py | sort | ./reducer.py
 
 #run it on hadoop
-hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input  -output /user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/output -mapper /california-bigdata-training/week-4/lesson-2/part-1/mapper.py -reducer /california-bigdata-training/week-4/lesson-2/part-1/reducer.py
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar 
+-input /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/input  
+-output /user/cloudera/california-bigdata-training/week-4/lesson-2/part-2/output 
+-mapper /california-bigdata-training/week-4/lesson-2/part-2/mapper.py 
+-reducer /california-bigdata-training/week-4/lesson-2/part-2/reducer.py
