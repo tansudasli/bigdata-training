@@ -34,6 +34,7 @@ hdfs dfs -cat /user/cloudera/output/*
 
 #only mapper results will be delivered
 #set numReduceTasks=0 !, and change output folder
+#mapper and reducer codes should not be under hdfs !!!!!
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
    -input /user/cloudera/input \
    -output /user/cloudera/output-2 \
