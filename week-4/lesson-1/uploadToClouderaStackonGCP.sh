@@ -43,3 +43,4 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 
 #merge files for uploading under GCP instance's /
 hdfs dfs -getmerge /user/cloudera/output-2/* wordcount_output.txt  
+# cat /user/cloudera/output-2/* 
