@@ -3,6 +3,7 @@
 8888 hue web ui
 80 getting started docs
 
+#optional
 60030
 25000 impala
 11000/oozie
