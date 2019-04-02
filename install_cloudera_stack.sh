@@ -22,7 +22,7 @@ wget https://downloads.cloudera.com/demo_vm/docker/cloudera-quickstart-vm-5.13.0
 tar -xvf cloudera-quickstart-vm-5.13.0-0-beta-docker.tar.gz
 cd cloudera-quickstart-vm-5.13.0-0-beta-docker/
 sudo docker import cloudera-quickstart-vm-5.13.0-0-beta-docker.tar
-echo "change image id"
+echo "image id will be detected"
 IMAGE_ID=$(docker images -a --format "{{.ID}}" | head -1)
 sudo docker run --hostname=quickstart.cloudera --privileged=true -tid -p 80:80  -p 11000:11000 -p 7180:7180 -p 50070:50070 -p 21050:21050 -p 18088:18088 -p 2181:2181 -p 8983:8983 -p 8984:8984 -p 8888:8888 $IMAGE_ID /usr/bin/docker-quickstart
 
