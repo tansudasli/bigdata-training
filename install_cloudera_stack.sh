@@ -4,6 +4,9 @@
 # 2- git clone ....
 # 3- or, manually on default ssh screens of GCP
 
+#give run permisson
+chmod +x california-bigdata-training/install_cloudera_stack.sh
+
 #install docker
 sudo apt-get update -y
 sudo apt-get upgrade -y
