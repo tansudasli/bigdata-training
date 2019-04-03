@@ -4,7 +4,7 @@ Big Data (Hadoop and Spark) Training by University of California San Diego on Co
 ## How to start
 create a GCP (ubuntu 18.04) instance on GCP console, then 
 ###### 1- upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
-* `wget https://raw.githubusercontent.com/tansudasli/california-bigdata-training/master/install_cloudera_stack.sh`
+`wget https://raw.githubusercontent.com/tansudasli/california-bigdata-training/master/install_cloudera_stack.sh`
 
 
 then give run permisson to install_cloudera_stack.sh file
