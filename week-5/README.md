@@ -8,8 +8,8 @@ If that's the case,
  `easy_install https://pypi.python.org/packages/source/i/ipython/ipython-1.2.1.tar.gz#md5=4ffb36697f7ca8cb4a2de0f5b30bc89c` 
 
 * 2- copy files into hdfs. normally you only need to copy input files.
- `export HADOOP_USER_NAME=hdfs`
- `hdfs dfs -put california-bigdata-training/ /user/cloudera/`
+   `export HADOOP_USER_NAME=hdfs`
+   `hdfs dfs -put california-bigdata-training/ /user/cloudera/`
 
 * 3- run pyspark inside ipython shell 
  `PYSPARK_DRIVER_PYTHON=ipython pyspark`
