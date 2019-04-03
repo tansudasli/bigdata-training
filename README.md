@@ -6,11 +6,11 @@ create a GCP (ubuntu 18.04) instance on GCP console, then
 ###### 1- upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
 `wget https://raw.githubusercontent.com/tansudasli/california-bigdata-training/master/install_cloudera_stack.sh`
 
+###### 2- then give run permisson to install_cloudera_stack.sh file
+`chmod +x install_cloudera_stack.sh` 
 
-then give run permisson to install_cloudera_stack.sh file
-###### 2- `chmod +x install_cloudera_stack.sh` 
-and run, 
-###### 3- `./install_cloudera_stack.sh` 
+###### 3- and run,
+`./install_cloudera_stack.sh` 
 
 if you face w/ connection or downloading issues, run it again after delete unnecessary folders.
 
@@ -22,7 +22,7 @@ This script will download docker and install on ubuntu server. Then downloads la
 * 8888 - hue
 
 ###### 5-docker attach and run inside docker instance to start cloudera stack.
-* `/home/cloudera/cloudera-manager --express --force`
+`/home/cloudera/cloudera-manager --express --force`
 
 ###### 6-connect your cloudera manager IP:7180. Then 
 * solve warnings (esp. memory ones. not HA issues or canary ones)
