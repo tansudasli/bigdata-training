@@ -14,8 +14,8 @@
 *  `hdfs dfs -ls /user/cloudera`  
 
 ###### Hive -> data in hfs and hbase  
-*  `hdfs dfs -put localFile /tmp          
-*  `beeline -u jdbc:hive2://  
+*  `hdfs dfs -put localFile /tmp `         
+*  `beeline -u jdbc:hive2://  `
 *  ```Jdbc:hive2://>  create table tableName (field STRING, field_2 INT) \
                             ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘separator’  \
                             STORED AS TEXTFILE;```
