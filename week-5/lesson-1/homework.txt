@@ -12,7 +12,7 @@ fileA.collect()
 fileB = sc.textFile("/user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input/join1_FileB.txt")
 fileB.collect()
 
-
+# mapper for fileA
 def split_fileA(line):
     # split the input line in word and count on the comma
     word,count = line.split(',')
@@ -21,3 +21,21 @@ def split_fileA(line):
     return (word, count)
 
 split_fileA('able,991')
+
+fileA_data = fileA.map(split_fileA)
+
+fileA_data.collect()
+
+# mapper for fileB
+def split_fileB(line):
+    # split the input line into word, date and count_string
+    word_date,count = line.split(',')
+    word, date = word_date.split(' ')
+    return (word, date + " " + count) 
+
+split_fileB('Jan-01 able,5')
+
+fileB_data = fileB.map(split_fileB)
+fileB_data.collect()
+
+# joinin the datasets
