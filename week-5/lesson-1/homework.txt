@@ -1,0 +1,23 @@
+
+# copy files into hdfs.
+# normally you only need to copy input files.
+export HADOOP_USER_NAME=hdfs
+hdfs dfs -put california-bigdata-training/ /user/cloudera/
+
+# launch pyspark with ipython-shell
+PYSPARK_DRIVER_PYTHON=ipython pyspark
+
+fileA = sc.textFile("/user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input/join1_FileA.txt")
+fileA.collect()
+fileB = sc.textFile("/user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input/join1_FileB.txt")
+fileB.collect()
+
+
+def split_fileA(line):
+    # split the input line in word and count on the comma
+    word,count = line.split(',')
+    # turn the count to an integer  
+    count = int(count)
+    return (word, count)
+
+split_fileA('able,991')
