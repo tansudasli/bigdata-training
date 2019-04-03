@@ -25,7 +25,7 @@ This script will download docker and install on ubuntu server. Then downloads la
 * `/home/cloudera/cloudera-manager --express --force`
 
 ###### 6-connect your cloudera manager IP:7180. Then 
-* solve warnings (esp, memory ones)
+* solve warnings (esp. memory ones. not HA issues or canary ones)
 * restart cloudera
 
 ## some notes
