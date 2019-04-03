@@ -2,8 +2,8 @@
 Big Data (Hadoop and Spark) Training by University of California San Diego on Coursera platform
 
 ## How to start
-###### create GCP instance on GCP console
-###### upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
+create GCP instance on GCP console
+upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
 ###### 1- gcloud compute scp ....
 ###### 2- git clone ....
 ###### 3- or, manually on default ssh screens of GCP
@@ -15,9 +15,8 @@ and run,
 
 if you face w/ connection or downloading issues, run it again after delete unnecessary folders.
 
-##general information about cloudera ports
-use *cloudera ports.txt* 
-
-##some notes
-general hadoop commands can be found in some hadoop commands.txt. use *uploadToClouderaStackonGCP* files for detailed commands under week* folders.
+## some notes
+* for general information about cloudera ports, use *cloudera ports.txt* 
+* general hadoop commands can be found in *some hadoop commands.txt* file. 
+* use *uploadToClouderaStackonGCP* files for detailed commands under week* folders.
 
