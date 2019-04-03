@@ -31,7 +31,7 @@ This script will download docker and install on ubuntu server. Then downloads la
 
 ## some notes
 * for general information about cloudera ports, use *cloudera ports.txt* 
-* general hadoop commands can be found in *week-3/some hadoop commands.txt* file. 
+* general hadoop commands can be found in *week-3*. 
 * use *uploadToClouderaStackonGCP* files for detailed commands under week* folders.
 
 ## cloudera ports

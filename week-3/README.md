@@ -1,10 +1,11 @@
-> hdfs dfs -put localFile /user/cloudera     {put a local file into hdfs file system}
-> pig -x mapreduce          {pig CLI}
-   grunt>  A = load ‘frpmHDFSFile’ using PigStorage(‘separator’);
-   grunt>  B = foreach A generate $0, $1;
-   grunt>  dump B;
-   grunt>  store B into ‘outputFile’;
-   grunt>  quit
+## some hadoop commands
+> `hdfs dfs -put localFile /user/cloudera`     {put a local file into hdfs file system}
+> `pig -x mapreduce`          {pig CLI}
+   `grunt>  A = load ‘frpmHDFSFile’ using PigStorage(‘separator’);`
+   `grunt>  B = foreach A generate $0, $1;`
+   `grunt>  dump B;`
+   `grunt>  store B into ‘outputFile’;`
+   `grunt>  quit`
 
 > hdfs dfs -ls /user/cloudera   {shows outputFile}
 
