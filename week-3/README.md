@@ -3,11 +3,11 @@
 *  `hdfs dfs -put localFile /user/cloudera`    
 ###### pig CLI 
 *  ``` pig -x mapreduce          
-*   grunt>  A = load ‘frpmHDFSFile’ using PigStorage(‘separator’);
-*   grunt>  B = foreach A generate $0, $1;
-*   grunt>  dump B;
-*   grunt>  store B into ‘outputFile’;
-*   grunt>  quit ```
+   grunt>  A = load ‘frpmHDFSFile’ using PigStorage(‘separator’);
+   grunt>  B = foreach A generate $0, $1;
+   grunt>  dump B;
+   grunt>  store B into ‘outputFile’;
+   grunt>  quit ```
 
 ###### shows outputFile
 *  `hdfs dfs -ls /user/cloudera`  
