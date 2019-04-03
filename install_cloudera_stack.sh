@@ -1,10 +1,10 @@
 #create GCP instance on GCP console
 #upload this file to GCP instance via
 # 1- gcloud compute scp ....
-# 2- git clone ....
+# 2- wget https://raw.githubusercontent.com/tansudasli/california-bigdata-training/master/install_cloudera_stack.sh
 # 3- or, manually on default ssh screens of GCP
 
-echo "give run permisson fist w/ chmod +x california-bigdata-training/install_cloudera_stack.sh, then run ./california-bigdata-training/install_cloudera_stack.sh"
+echo "give run permisson fist w/ chmod +x install_cloudera_stack.sh, then run ./install_cloudera_stack.sh"
 
 #install docker
 sudo apt-get update -y
