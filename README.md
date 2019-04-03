@@ -9,7 +9,7 @@ upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* t
 ###### 3- or, manually on default ssh screens of GCP
 
 then give run permisson to install_cloudera_stack.sh file
-###### 4- *chmod +x california-bigdata-training/install_cloudera_stack.sh* 
+###### 4- `chmod +x california-bigdata-training/install_cloudera_stack.sh` 
 and run, 
 ###### 5- *./california-bigdata-training/install_cloudera_stack.sh* 
 
