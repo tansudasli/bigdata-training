@@ -4,15 +4,15 @@ First, connect to your GCP instance. Then attach to cloudera docker image. This 
 When you run `sudo easy_install ipython==1.2.1`, you get *easy_install: command not found* error. 
 
 If that's the case,
-* 1- remove sudo, and try with package path. cause docker image is already connected as root :
- `easy_install https://pypi.python.org/packages/source/i/ipython/ipython-1.2.1.tar.gz#md5=4ffb36697f7ca8cb4a2de0f5b30bc89c` 
+* 1- remove sudo, and try with package path. cause docker image is already connected as root :<br />
+`easy_install https://pypi.python.org/packages/source/i/ipython/ipython-1.2.1.tar.gz#md5=4ffb36697f7ca8cb4a2de0f5b30bc89c` 
 
 * 2- copy files into hdfs. normally you only need to copy input files.<br />
-`export HADOOP_USER_NAME=hdfs`
+`export HADOOP_USER_NAME=hdfs`<br />
 `hdfs dfs -put california-bigdata-training/ /user/cloudera/`
 
-* 3- run pyspark inside ipython shell 
- `PYSPARK_DRIVER_PYTHON=ipython pyspark`
+* 3- run pyspark inside ipython shell <br />
+`PYSPARK_DRIVER_PYTHON=ipython pyspark`
 
 Now, you can write code in python-shell
 

@@ -1,9 +1,4 @@
 
-
-
-# launch pyspark with ipython-shell
-PYSPARK_DRIVER_PYTHON=ipython pyspark
-
 fileA = sc.textFile("/user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input/join1_FileA.txt")
 fileA.collect()
 fileB = sc.textFile("/user/cloudera/california-bigdata-training/week-4/lesson-2/part-1/input/join1_FileB.txt")
