@@ -1,6 +1,8 @@
 ## california-bigdata-training
 Big Data (Hadoop and Spark) Training by University of California San Diego on Coursera platform
 
+To establish a cloudera stack takes time. So to wramp up this process, use *install_cloudera_stack.sh* file. It downloads docker and installs on ubuntu server. And Then downloads latest cloudera docker image on top of it.
+
 ## How to start
 create a GCP (ubuntu 18.04) instance on GCP console, then 
 ###### 1- upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
@@ -13,8 +15,6 @@ create a GCP (ubuntu 18.04) instance on GCP console, then
 `./install_cloudera_stack.sh` 
 
 if you face w/ connection or downloading issues, run it again after delete unnecessary folders.
-
-This script will download docker and install on ubuntu server. Then downloads latest cloudera docker image on top of it.
 
 ###### 4-open above ports on GCP Firewall for web UI access
 * 80 - getting started, 
