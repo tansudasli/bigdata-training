@@ -1,4 +1,5 @@
 # How to setup pyspark
+First, connect to your GCP instance. Then attach to cloudera docker image. This will connect you as root user. So you do not need `sudo` prefix.
 
 When you run `sudo easy_install ipython==1.2.1`, you get *easy_install: command not found* error. 
 
