@@ -4,7 +4,9 @@ Big Data (Hadoop and Spark) Training by University of California San Diego on Co
 To establish a cloudera stack takes time. So to wramp up this process, use *install_cloudera_stack.sh* file. It downloads docker and installs on ubuntu server. And Then downloads latest cloudera docker image on top of it.
 
 ## How to start
-create a GCP (ubuntu 18.04) instance on GCP console, then 
+create a GCP (ubuntu 18.04) instance on GCP console, then connect with that server via appropriate SSH ways.
+* 'gcloud compute --project .... ssh --zone .... ....' 
+
 ###### 1- upload *install_cloudera_stack.sh* or *tansudasli/california-bigdata-training* to GCP instance via
 `wget https://raw.githubusercontent.com/tansudasli/california-bigdata-training/master/install_cloudera_stack.sh`
 
